@@ -1,0 +1,1346 @@
+:root {
+  --charcoal: #2E5266;
+  --slate-gray: #6E8898;
+  --cadet-gray: #9FB1BC;
+  --timberwolf: #D3D0CB;
+  --old-gold: #FFCC00;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--timberwolf);
+  color: var(--charcoal);
+}
+
+header {
+  background-color: var(--charcoal);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+}
+
+nav a.active {
+  color: var(--old-gold);
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: lightblue;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--old-gold);
+  color: var(--baby-powder);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Каталог */
+.catalog {
+  text-align: center;
+  padding: 2rem;
+  color: #333;
+}
+
+.catalog h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.catalog p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #333;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #5B5F97;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #FFC145;
+  color: #000;
+}
+
+/* За коледна тема */
+body.christmas .card {
+  background: #FF6B6C;
+  color: #fff;
+}
+
+body.christmas .btn {
+  background: #FFC145;
+  color: #000;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--slate-gray);
+  color: white;
+  margin-top: 2rem;
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--charcoal);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px; /* можеш да промениш на 50px или 60px */
+  width: auto;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--light); /* според твоята цветова палитра */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: var(--primary);
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* --- LOGO --- */
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--light);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  border-radius: 8px;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+/* --- MENU BUTTON (мобилно) --- */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--primary);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}
+
+.christmas body {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.christmas header {
+  background: #b71c1c;
+}
+
+.christmas .hero {
+  background: linear-gradient(135deg, #b71c1c, #1b5e20);
+  color: #fff;
+}
+
+.christmas .btn {
+  background: #388e3c;
+}
+
+.christmas footer {
+  background: #b71c1c;
+}
+
+/* ❄️ Ефект на падащ сняг */
+.snowflake {
+  position: fixed;
+  top: 0;
+  color: white;
+  font-size: 1.5em;
+  animation: fall 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.about {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #333;
+  text-align: center;
+}
+
+.about h1, .about h2 {
+  color: #5B5F97;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.member {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.member img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.member h3 {
+  color: #333;
+  margin: 0.3rem 0;
+}
+
+.member p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Коледен режим */
+body.christmas .about h1,
+body.christmas .about h2 {
+  color: #FFC145;
+}
+
+body.christmas .member {
+  background: #FF6B6C;
+  color: #fff;
+}
+
+.contact-page {
+  text-align: center;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-page h1 {
+  color: #5B5F97;
+  margin-bottom: 1rem;
+}
+
+.contact-page p {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #FFFFFB;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #5B5F97;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form .btn {
+  background: #5B5F97;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form .btn:hover {
+  background: #FFC145;
+  transform: scale(1.03);
+}
+
+/* 🎄 Коледен режим */
+body.christmas .contact-form {
+  background: #FF6B6C;
+  color: white;
+}
+
+body.christmas .contact-form input,
+body.christmas .contact-form textarea {
+  background: #fff;
+  border: none;
+}
+
+body.christmas .contact-form .btn {
+  background: #FFC145;
+  color: #5B5F97;
+}
+
+.blog {
+  text-align: center;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.post {
+  background: #FFFFFB;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.post img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post h2 {
+  color: #5B5F97;
+  font-size: 1.3rem;
+}
+
+.post p {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.post .btn {
+  display: inline-block;
+  background: #5B5F97;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.post .btn:hover {
+  background: #FFC145;
+  color: #000;
+}
+
+/* 🎄 Коледен режим */
+body.christmas .post {
+  background: #FF6B6C;
+  color: white;
+}
+
+body.christmas .post .btn {
+  background: #FFC145;
+  color: #5B5F97;
+}
+.snowflake {
+  position: fixed;
+  top: 0;
+  font-size: 1.2rem;
+  color: white;
+  pointer-events: none;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* 🎅 Текстът в header да е бял в коледен режим */
+body.christmas header,
+body.christmas header a,
+body.christmas header span {
+  color: white !important;
+}
+
+body.christmas nav a:hover,
+body.christmas nav a.active {
+  color: #FFC145 !important; /* златисто за акцент */
+}
+
+/* ✨ Коледен ефект за логото */
+body.christmas .logo img {
+  filter: drop-shadow(0 0 8px #FFC145) brightness(1.2);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 6px #FFC145) brightness(1.1);
+  }
+  to {
+    filter: drop-shadow(0 0 16px #FFFA9E) brightness(1.3);
+  }
+}
+
+.blog-post {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.blog-post h1 {
+  color: #5B5F97;
+  margin-bottom: 1rem;
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post p {
+  color: #444;
+  line-height: 1.6;
+}
+
+body.christmas .blog-post {
+  background: #FF6B6C;
+  color: white;
+}
+
+body.christmas .blog-post h1 {
+  color: #FFC145;
+}
+
+/* --- Модерен стил за навигационните бутони --- */
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--old-gold);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--old-gold);
+}
+
+/* 🎄 Коледен режим — червен акцент вместо златен */
+body.christmas nav a::after {
+  background: #FFC145;
+}
+
+body.christmas nav a:hover {
+  color: #FFC145;
+}
+
+.login-page {
+  text-align: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  border-color: #5B5F97;
+}
+
+.login-form .btn {
+  background: #5B5F97;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form .btn:hover {
+  background: #FFC145;
+  color: #000;
+}
+
+.login-form a {
+  color: #5B5F97;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/* 🎄 Коледен режим */
+body.christmas .login-form {
+  background: #FF6B6C;
+  color: white;
+}
+
+body.christmas .login-form input {
+  background: #fff;
+}
+
+body.christmas .login-form .btn {
+  background: #FFC145;
+  color: #5B5F97;
+}
+
+/* === Register Page === */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #FFFFFB;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.register-form input {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.register-form input:focus {
+  border-color: #5B5F97;
+}
+
+.register-form .btn {
+  background: #5B5F97;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.register-form .btn:hover {
+  background: #FFC145;
+  color: #000;
+  transform: scale(1.03);
+}
+
+/* 🎄 Коледен режим */
+body.christmas .register-form {
+  background: #FF6B6C;
+  color: white;
+}
+
+body.christmas .register-form input {
+  background: #fff;
+  border: none;
+}
+
+body.christmas .register-form .btn {
+  background: #FFC145;
+  color: #5B5F97;
+}
+/* Hero секция с grid оформление */
+.hero {
+  background: linear-gradient(to right, #87CEEB, #b0e0e6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #f9f9f9;
+  margin: 15px 0 25px;
+}
+
+.hero-text .btn {
+  background: #fff;
+  color: #007FFF;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background: #007FFF;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Hero изображение */
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Респонсивност */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+}
+
+.social {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.theme-switch-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#theme-toggle {
+  background: linear-gradient(135deg, #5B5F97, #FFC145);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.07);
+  opacity: 1;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+body.christmas #theme-toggle {
+  background: linear-gradient(135deg, #b71c1c, #388e3c);
+  color: #fff;
+}
+
+/* 🎯 Търсачка */
+.search-bar {
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 2rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.search-bar:focus {
+  border-color: #ff4444;
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
+}
+
+/* 🎲 Бутон „Случаен модел“ */
+#randomModel {
+  display: block;
+  margin: 10px auto 30px auto;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, #ff0000, #ff9900);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.4s ease;
+}
+
+#randomModel:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.6);
+  background: linear-gradient(45deg, #ff6600, #ffcc00);
+}
+
+#randomModel:active {
+  transform: scale(0.97);
+}
+
+/* 🎄 Коледен режим — малка промяна в цветовете */
+body.christmas .search-bar {
+  border-color: gold;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.christmas #randomModel {
+  background: linear-gradient(45deg, #c00000, #008000);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+body.christmas #randomModel:hover {
+  background: linear-gradient(45deg, #ff3333, #00cc00);
+}
+
+/* 📱 Responsive подравняване */
+@media (max-width: 600px) {
+  .search-bar {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  #randomModel {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+/* 🕒 Countdown стил */
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #ff4b1f, #1fddff);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px 50px;
+  margin: 50px auto;
+  width: fit-content;
+  font-size: 1.8rem;
+  text-align: center;
+  animation: glowPulse 3s infinite;
+}
+
+#countdown span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#countdown span strong {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* ✨ Пулсиращ ефект */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 35px rgba(255, 255, 255, 0.9); }
+}
+
+/* 🎄 Коледен режим */
+body.christmas #countdown {
+  background: linear-gradient(90deg, #c00000, #008000);
+  color: gold;
+  text-shadow: 0 0 10px white;
+}
+/* 🎅 Countdown секция */
+.countdown-section {
+  text-align: center;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.countdown-section h2 {
+  font-size: 2rem;
+  color: #ff4444;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* 🕒 Countdown блок */
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #ff4b1f, #1fddff);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px 50px;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  animation: glowPulse 3s infinite;
+}
+
+#countdown span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#countdown span strong {
+  font-size: 3rem;
+  color: #fff;
+}
+
+/* ✨ Пулсиращ ефект */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 35px rgba(255, 255, 255, 0.9); }
+}
+
+/* 🎄 Коледен режим */
+body.christmas .countdown-section h2 {
+  color: gold;
+  text-shadow: 0 0 15px red;
+}
+
+body.christmas #countdown {
+  background: linear-gradient(90deg, #c00000, #008000);
+  color: gold;
+  text-shadow: 0 0 10px white;
+}
+/* 🎅 Анимиран текст за countdown */
+.countdown-title {
+  font-size: 2rem;
+  color: #ff4444;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation: fadeIn 2s ease-out, pulseGlow 3s infinite ease-in-out;
+}
+
+/* 🌟 Плавно появяване */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 💫 Пулсиращ неонов ефект */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 20px rgba(255, 68, 68, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                 0 0 40px rgba(255, 68, 68, 1);
+  }
+}
+
+/* 🎄 Коледен режим */
+body.christmas .countdown-title {
+  color: gold;
+  animation: fadeIn 2s ease-out, pulseGlowChristmas 3s infinite ease-in-out;
+}
+
+@keyframes pulseGlowChristmas {
+  0%, 100% {
+    text-shadow: 0 0 10px red, 0 0 20px green, 0 0 30px gold;
+  }
+  50% {
+    text-shadow: 0 0 25px gold, 0 0 40px red, 0 0 60px green;
+  }
+}
+/* 💖 Модерен бутон „Добави в любими“ */
+.fav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🌈 Ефект при задържане */
+.fav-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 15px rgba(255, 65, 108, 0.6);
+}
+
+/* 💥 Ефект при натискане */
+.fav-btn:active {
+  transform: scale(0.95);
+}
+
+/* ❤️ Ефект на пулсиране при натискане */
+.fav-btn.added {
+  background: linear-gradient(45deg, #00b09b, #96c93d);
+  box-shadow: 0 0 15px rgba(150, 201, 61, 0.7);
+  animation: pulseHeart 1s ease;
+}
+
+@keyframes pulseHeart {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* 🎄 Коледен режим */
+body.christmas .fav-btn {
+  background: linear-gradient(45deg, #c00000, #008000);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+body.christmas .fav-btn.added {
+  background: linear-gradient(45deg, #00cc00, #ff3333);
+  box-shadow: 0 0 20px gold;
+}
+
+/* 💚 Любими страница */
+.favorites-page {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.favorites-page h1 {
+  font-size: 2rem;
+  color: #ff416c;
+  margin-bottom: 10px;
+}
+
+.favorites-page p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+#favorites-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+#favorites-list .card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+#favorites-list .card:hover {
+  transform: translateY(-5px);
+}
+
+.remove-btn {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: linear-gradient(45deg, #ff6600, #ffcc00);
+  transform: scale(1.05);
+}
+
+.danger-btn {
+  background: linear-gradient(45deg, #b30000, #ff0000);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.danger-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* 🎄 Коледен режим */
+body.christmas .favorites-page h1 {
+  color: gold;
+  text-shadow: 0 0 10px red;
+}
+
+body.christmas .remove-btn {
+  background: linear-gradient(45deg, #c00000, #008000);
+}
+
+body.christmas .danger-btn {
+  background: linear-gradient(45deg, #ff0000, #006600);
+}
+
+/* 📱 Базов стил за навигацията */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🧱 За мобилни устройства */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    height: calc(100vh - 70px);
+    background-color: rgba(30, 30, 30, 0.95);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  nav.show {
+    transform: translateX(0);
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  /* скриваме бутоните за тема, ако е нужно */
+  #theme-toggle {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+/* 🖋️ Ефект при hover на меню */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+/* ✨ Анимация при отваряне */
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+#user-info {
+  color: white;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-logout {
+  margin-left: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-logout:hover {
+  background: darkred;
+}
